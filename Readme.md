@@ -27,8 +27,8 @@ A aplicação também usa Terraform para Infra que configura um provedor Google 
 - Monte a imagem de cada módulo: docker build -t crypto:latest .
     
 - **Empréstimos** (Porta: 8084): Gerencia empréstimos.
-- Monte a imagem de cada módulo: docker build -t cemprestimos:latest .
-  - 
+-  Monte a imagem de cada módulo: docker build -t cemprestimos:latest .
+    
 - **Finance** (Porta: 8085): Serviço financeiro geral.
 -  Monte a imagem de cada módulo: docker build -t finance:latest .
    
