@@ -19,31 +19,31 @@ A aplicação também usa Terraform para Infra que configura um provedor Google 
 
 - **Carteira** (Porta: 8081): Gerencia a carteira do usuário.
 - Monte a imagem de cada módulo: docker build -t carteira:latest .
-- 
+  
 - **Cobrar** (Porta: 8082): Serviço de cobrança.
 - - Monte a imagem de cada módulo: docker build -t cobrar:latest .
-  - 
+    
 - **Crypto** (Porta: 8083): Serviço relacionado a criptomoedas.
 - - Monte a imagem de cada módulo: docker build -t crypto:latest .
-  - 
+    
 - **Empréstimos** (Porta: 8084): Gerencia empréstimos.
 - - Monte a imagem de cada módulo: docker build -t cemprestimos:latest .
   - 
 - **Finance** (Porta: 8085): Serviço financeiro geral.
 - - Monte a imagem de cada módulo: docker build -t finance:latest .
-  - 
+   
 - **Investir** (Porta: 8086): Serviço de investimentos.
 - - Monte a imagem de cada módulo: docker build -t investir:latest .
-  - 
+    
 - **Notificações** (Porta: 8087): Gerencia notificações do usuário.
 - - Monte a imagem de cada módulo: docker build -t notificacoes:latest .
-  - 
+    
 - **Pagar** (Porta: 8088): Serviço de pagamentos.
 - - Monte a imagem de cada módulo: docker build -t pagar:latest .
-  - 
+    
 - **Sacar** (Porta: 8089): Serviço de saques.
 - - Monte a imagem de cada módulo: docker build -t sacar:latest .
-  - 
+    
 - **Seguros** (Porta: 8090): Gerencia seguros.
 - - Monte a imagem de cada módulo: docker build -t seguros:latest .
 
