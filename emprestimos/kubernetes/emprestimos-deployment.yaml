@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emprestimos-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: emprestimos
+  template:
+    metadata:
+      labels:
+        app: emprestimos
+    spec:
+      containers:
+      - name: emprestimos
+        image: [SEU_REPOSITORIO_DOCKER]/emprestimos:latest
+        ports:
+        - containerPort: 8084

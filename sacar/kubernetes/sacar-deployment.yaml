@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sacar-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sacar
+  template:
+    metadata:
+      labels:
+        app: sacar
+    spec:
+      containers:
+      - name: pagar
+        image: [SEU_REPOSITORIO_DOCKER]/sacar:latest
+        ports:
+        - containerPort: 8089

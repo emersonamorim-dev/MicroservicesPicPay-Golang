@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carteira-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: carteira
+  template:
+    metadata:
+      labels:
+        app: carteira
+    spec:
+      containers:
+      - name: carteira
+        image: [SEU_REPOSITORIO_DOCKER]/carteira:latest
+        ports:
+        - containerPort: 8081

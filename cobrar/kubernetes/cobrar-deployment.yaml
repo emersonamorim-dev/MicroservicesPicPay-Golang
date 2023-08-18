@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cobrar-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cobrar
+  template:
+    metadata:
+      labels:
+        app: cobrar
+    spec:
+      containers:
+      - name: cobrar
+        image: [SEU_REPOSITORIO_DOCKER]/cobrar:latest
+        ports:
+        - containerPort: 8082

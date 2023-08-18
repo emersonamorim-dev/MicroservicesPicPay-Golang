@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notificacoes-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: notificacoes
+  template:
+    metadata:
+      labels:
+        app: notificacoes
+    spec:
+      containers:
+      - name: notificacoes
+        image: [SEU_REPOSITORIO_DOCKER]/notificacoes:latest
+        ports:
+        - containerPort: 8087

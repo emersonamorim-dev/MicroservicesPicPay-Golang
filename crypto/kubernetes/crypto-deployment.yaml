@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crypto-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: crypto
+  template:
+    metadata:
+      labels:
+        app: crypto
+    spec:
+      containers:
+      - name: crypto
+        image: [SEU_REPOSITORIO_DOCKER]/crypto:latest
+        ports:
+        - containerPort: 8083

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pagar-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pagar
+  template:
+    metadata:
+      labels:
+        app: pagar
+    spec:
+      containers:
+      - name: pagar
+        image: [SEU_REPOSITORIO_DOCKER]/pagar:latest
+        ports:
+        - containerPort: 8088

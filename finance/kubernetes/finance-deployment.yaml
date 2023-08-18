@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: finance-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: finance
+  template:
+    metadata:
+      labels:
+        app: finance
+    spec:
+      containers:
+      - name: finance
+        image: [SEU_REPOSITORIO_DOCKER]/finance:latest
+        ports:
+        - containerPort: 8085

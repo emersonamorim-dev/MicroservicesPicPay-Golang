@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: investir-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: investir
+  template:
+    metadata:
+      labels:
+        app: investir
+    spec:
+      containers:
+      - name: investir
+        image: [SEU_REPOSITORIO_DOCKER]/investir:latest
+        ports:
+        - containerPort: 8086

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: seguros-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: seguros
+  template:
+    metadata:
+      labels:
+        app: seguros
+    spec:
+      containers:
+      - name: seguros
+        image: [SEU_REPOSITORIO_DOCKER]/seguros:latest
+        ports:
+        - containerPort: 8090
