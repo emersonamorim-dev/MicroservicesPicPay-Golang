@@ -80,6 +80,7 @@ curl http://localhost:8081/[ENDPOINT_ESPECÍFICO]
 
 ## Monitoramento
 O Prometheus e o ElasticSearch estão configurados para monitorar a saúde e o desempenho dos serviços. Acesse suas interfaces web para visualizar métricas e logs.
+```
 
 ## Autor:
 Emerson Amorim
